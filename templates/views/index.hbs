@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Home</title>
+  <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather02-512.png">
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+  <div class="main-content">
+    {{>header}}
+    <p>Use this site to get weather.</p>
+    <form action="">
+      <input placeholder="Type location here" type="text">
+      <button>Search</button>
+    </form>
+    <p id="message-1"></p>
+    <p id="message-2"></p>
+  </div>
+  {{>footer}}
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
