@@ -2,6 +2,7 @@ const path = require("path");
 const express = require("express");
 const hbs = require("hbs");
 const app = express();
+const port = process.env.PORT || 3000;
 const forecast = require("./source/utils/forecast");
 const geocode = require("./source/utils/geocode");
 
@@ -90,6 +91,6 @@ app.get("*", (req, res) => {
   res.render("404", { title: "404 Page!", name, text: "Page Not Found!" });
 });
 
-app.listen(3000, () => {
-  console.log("Server running on port no: 3000");
+app.listen(port, () => {
+  console.log("Server running on port no: " + port);
 });
